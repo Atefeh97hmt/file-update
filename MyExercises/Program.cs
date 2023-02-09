@@ -7,7 +7,6 @@ class MyApp
 {
     static void Main()
     {
-        string YourName = "";
         var filePath = @"E:\names.txt";
         using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate))
         {
@@ -25,12 +24,11 @@ class MyApp
             using (StreamWriter sw = new StreamWriter(fs))
             {
                 Console.WriteLine("please enter your name to the list above:");
-                YourName = Console.ReadLine();
-                string fullText = (YourName);
-                sw.WriteLine(fullText);
-                Console.ReadLine();
+                string yourName = Console.ReadLine();
+                sw.WriteLine(yourName);
             }
-        }
 
+        }
+        Console.ReadKey();
     }
 }
