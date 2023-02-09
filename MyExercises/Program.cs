@@ -14,7 +14,7 @@ class MyApp
             {
                 string content = sr.ReadToEnd();
                 string[] lines = content.Split(new string[] { Environment.NewLine },
-                    StringSplitOptions.RemoveEmptyEntries);
+                StringSplitOptions.RemoveEmptyEntries);
                 Console.WriteLine(content);
             }
         }
